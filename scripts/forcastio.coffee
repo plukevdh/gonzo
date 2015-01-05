@@ -17,8 +17,8 @@ FORCAST_ENDPOINT = "https://api.forecast.io/forecast/#{API_KEY}"
 DIRECTIONS = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]
 
 angleToDirection = (angle) ->
-  num = Math.round(((angle + 22.5) / 45) % 8)
-  DIRECTIONS[num-1]
+  num = Math.round(((angle - 22.5) / 45) % 8)
+  DIRECTIONS[num]
 
 # Params:
 #   latLong = Object literal with keys lat and lng
